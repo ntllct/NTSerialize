@@ -1,6 +1,6 @@
 # NTSerialize library
 
-This library can help you to save your C++ programm data into compact binary file. Just follow the steps below:
+This library can help you to save your C++ program data into compact binary file. Just follow the steps below:
 
 Include the header file:
 
@@ -46,9 +46,9 @@ Also, you can write your own structures. For example, you have something like th
 
 ```cpp
 struct MyStruct {
-	unsigned int x1;
-	unsigned int x2;
-	std::fstream fs;
+    unsigned int x1;
+    unsigned int x2;
+    std::fstream fs;
 };
 ```
 
@@ -56,20 +56,20 @@ Add two operators into your class:
 
 ```cpp
 struct MyStruct {
-	unsigned int x1;
-	unsigned int x2;
-	std::fstream fs;
-	
-	friend NTSerialize& operator<<( NTSerialize& bnz,
-									const MyStruct& ms ) {
-		bnz << ms.x1 << ms.x2;
-		return( bnz );
-	}
-	friend NTSerialize& operator>>( NTSerialize& bnz,
-									MyStruct& ms ) {
-		bnz >> ms.x1 >> ms.x2;
-		return( bnz );
-	}
+    unsigned int x1;
+    unsigned int x2;
+    std::fstream fs;
+    
+    friend NTSerialize& operator<<( NTSerialize& bnz,
+                                    const MyStruct& ms ) {
+        bnz << ms.x1 << ms.x2;
+        return( bnz );
+    }
+    friend NTSerialize& operator>>( NTSerialize& bnz,
+                                    MyStruct& ms ) {
+        bnz >> ms.x1 >> ms.x2;
+        return( bnz );
+    }
 };
 ```
 
