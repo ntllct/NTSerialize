@@ -4,8 +4,7 @@
  * @author     Alexander Alexeev &lt;ntllct@protonmail.com&gt;
  * @date       Oct 15, 2018
  * @copyright  Copyright &copy; 2018 Alexander Alexeev.
- *             This project is released under the GNU Lesser
- *             General Public License Version 3.
+ *             This project is released under the MIT License.
  */
 
 /*********************************************************************
